@@ -10,19 +10,23 @@ import {
   Card,
   Elevation
 } from '@blueprintjs/core';
+import SummaryTable from './SummaryTable';
 import logo from '../images/Pwc-logo-880x660.png';
 
 class SummaryCard extends Component {
   render() {
+    const year = this.props.year;
+    const desc = this.props.desc;
+    const data = this.props.data[desc];
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', margin: '2%' }}>
-        <Card elevation="4" interactive="true" style={{ margin: '1%' }}>
-          <h5>
-            <a href="#">{this.props.year} Sample Co. R&D Tax Credit Study</a>
-          </h5>
-          <Button className="pt-minimal" icon="document" text="View" />
-        </Card>
-      </div>
+      <Card elevation="4" interactive="true" style={{ margin: '1%', width: '55%' }}>
+        <h5>
+          <a href="#">{year} Sample Co. R&D Tax Credit Study</a>
+        </h5>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <SummaryTable data={data} />
+        </div>
+      </Card>
     );
   }
 }
