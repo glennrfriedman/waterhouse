@@ -8,7 +8,8 @@ import {
   NavbarHeading,
   Switch,
   Card,
-  Elevation
+  Elevation,
+  Callout
 } from '@blueprintjs/core';
 import SummaryTable from './SummaryTable';
 import logo from '../images/Pwc-logo-880x660.png';
@@ -20,9 +21,11 @@ class SummaryCard extends Component {
     const data = this.props.data[desc];
     return (
       <Card elevation="4" interactive="true" style={{ margin: '1%', width: '55%' }}>
-        <h5>
-          <a href="#">{year} Sample Co. R&D Tax Credit Study</a>
-        </h5>
+        <Callout intent={this.props.intent}>
+          <h5>
+            <a href="#">{year} Sample Co. R&D Tax Credit Study</a>
+          </h5>
+        </Callout>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <SummaryTable data={data} />
         </div>

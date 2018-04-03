@@ -10,11 +10,10 @@ import {
   Card,
   Elevation
 } from '@blueprintjs/core';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Home from './components/Home';
-import './App.css';
+import Nav from './Nav';
+import SummaryCard from './SummaryCard';
 
-class App extends Component {
+class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,13 +56,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <BrowserRouter>
-          <Route path="/" render={props => <Home {...props} />} />
-        </BrowserRouter>
+      <div style={{ margin: '2%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <SummaryCard year="2018" desc="current" data={this.state.data} intent="warning" />
+        <SummaryCard year="2017" desc="prior" data={this.state.data} intent="success" />
+        <SummaryCard year="2016" desc="prior2" data={this.state.data} intent="success" />
+        <SummaryCard year="2015" desc="prior3" data={this.state.data} intent="success" />
       </div>
     );
   }
 }
 
-export default App;
+export default Landing;
