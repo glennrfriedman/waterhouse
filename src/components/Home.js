@@ -7,17 +7,49 @@ import QRE from './QRE';
 class Home extends Component {
   constructor(props) {
     super(props);
-
-    // this.state = {
-    //   url: 'https://warm-cliffs-55595.herokuapp.com'
-    // };
+    this.state = {
+      data: {
+        current: {
+          wageQRE: '$1,937,800',
+          supplyQRE: '$40,089',
+          contractQRE: '$891,091',
+          wageCredit: '$174,402',
+          supplyCredit: '$3,608',
+          contractCredit: '$80,198'
+        },
+        prior: {
+          wageQRE: '$1,504,500',
+          supplyQRE: '$38,089',
+          contractQRE: '$758,091',
+          wageCredit: '$174,402',
+          supplyCredit: '$3,608',
+          contractCredit: '$80,198'
+        },
+        prior2: {
+          wageQRE: '$1,637,800',
+          supplyQRE: '$42,991',
+          contractQRE: '$405,190',
+          wageCredit: '$174,402',
+          supplyCredit: '$3,608',
+          contractCredit: '$80,198'
+        },
+        prior3: {
+          wageQRE: '$1,437,700',
+          supplyQRE: '$32,871',
+          contractQRE: '$604,331',
+          wageCredit: '$174,402',
+          supplyCredit: '$3,608',
+          contractCredit: '$80,198'
+        }
+      }
+    };
   }
 
   renderView() {
     return (
       <Switch>
-        <Route exact path="/" render={props => <Landing />} />
-        <Route exact path="/qre" render={props => <QRE />} />
+        <Route exact path="/" render={props => <Landing data={this.state.data} />} />
+        <Route exact path="/qre" render={props => <QRE data={this.state.data} />} />
       </Switch>
     );
   }
