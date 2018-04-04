@@ -1,15 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Alignment,
-  Button,
-  Navbar,
-  NavbarDivider,
-  NavbarGroup,
-  NavbarHeading,
-  Switch,
-  Card,
-  Elevation
-} from '@blueprintjs/core';
+import { Button, Navbar, NavbarDivider, NavbarGroup, NavbarHeading } from '@blueprintjs/core';
 import { Link } from 'react-router-dom';
 import logo from '../images/Pwc-logo-880x660.png';
 

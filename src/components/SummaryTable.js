@@ -17,8 +17,6 @@ class SummaryTable extends Component {
         numeral(this.props.data.contractCredit).value();
       return numeral(sumCredit).format('$0,0.00');
     };
-    const year = this.props.year;
-    console.log(this.props.qre);
     return (
       <table className="pt-html-table .modifier pt-html-table-bordered pt-html-table-striped">
         <thead>

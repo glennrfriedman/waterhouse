@@ -1,16 +1,4 @@
 import React, { Component } from 'react';
-import {
-  Alignment,
-  Button,
-  Navbar,
-  NavbarDivider,
-  NavbarGroup,
-  NavbarHeading,
-  Switch,
-  Card,
-  Elevation
-} from '@blueprintjs/core';
-import Nav from './Nav';
 import SummaryCard from './SummaryCard';
 
 class Landing extends Component {

@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Nav from './Nav';
 import Landing from './Landing';
 import QRE from './QRE';
+import Study from './Study';
 
 class Home extends Component {
   constructor(props) {
@@ -50,6 +51,7 @@ class Home extends Component {
       <Switch>
         <Route exact path="/" render={props => <Landing data={this.state.data} />} />
         <Route exact path="/qre" render={props => <QRE data={this.state.data} />} />
+        <Route exact path="/year" render={props => <Study data={this.state.data} />} />
       </Switch>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Pie, Bar, Doughnut } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import numeral from 'numeral';
 
 class QRE extends Component {
