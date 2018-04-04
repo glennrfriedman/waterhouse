@@ -62,11 +62,12 @@ class QRE extends Component {
   };
 
   render() {
-    console.log('bar data is', this.state.barChartData);
+    // console.log('bar data is', this.state.barChartData);
+    const data = this.state.barChartData;
     return (
       <div style={{ display: 'flex', flexDirection: 'column', width: '90%', margin: '5%' }}>
         <Bar
-          data={this.state.barChartData}
+          data={data}
           options={{
             title: {
               display: true,

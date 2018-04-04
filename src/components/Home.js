@@ -49,9 +49,9 @@ class Home extends Component {
   renderView() {
     return (
       <Switch>
-        <Route exact path="/" render={props => <Landing data={this.state.data} />} />
-        <Route exact path="/qre" render={props => <QRE data={this.state.data} />} />
-        <Route exact path="/year" render={props => <Study data={this.state.data} />} />
+        <Route exact path="/" render={props => <Landing data={this.state.data} routeProps={props} />} />
+        <Route exact path="/qre" render={props => <QRE data={this.state.data} routeProps={props} />} />
+        <Route exact path="/:desc" render={props => <Study data={this.state.data} routeProps={props} />} />
       </Switch>
     );
   }

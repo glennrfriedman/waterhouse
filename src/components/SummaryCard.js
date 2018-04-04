@@ -29,6 +29,7 @@ class SummaryCard extends Component {
     const year = this.props.year;
     const desc = this.props.desc;
     const data = this.props.data[desc];
+    const link = `/${desc}`;
     return (
       <Card
         elevation="4"
@@ -39,10 +40,17 @@ class SummaryCard extends Component {
         <Callout intent={this.props.intent}>
           <Tooltip content={this.state.tooltipDesc}>
             <h5>
-              <Link to="/year">{year} Sample Co. R&D Tax Credit Study</Link>
+              <Link
+                to={{
+                  pathname: link,
+                  state: { desc: this.props.desc, year: this.props.year }
+                }}
+              >
+                {year} Sample Co. R&D Tax Credit Study{' '}
+              </Link>
             </h5>
           </Tooltip>
-        </Callout>
+        </Callout>{' '}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <SummaryTable data={data} />
         </div>
