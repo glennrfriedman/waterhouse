@@ -4,6 +4,9 @@ import Nav from './Nav';
 import Landing from './Landing';
 import QRE from './QRE';
 import Study from './Study';
+import logo from '../images/Pwc-logo-880x660.png';
+import { Layout, Menu, Breadcrumb } from 'antd';
+const { Header, Content, Footer } = Layout;
 
 class Home extends Component {
   constructor(props) {
@@ -58,10 +61,11 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <Layout>
         <Nav />
-        {this.renderView()}
-      </div>
+        <Content style={{ padding: '0 50px', marginTop: 64 }}>{this.renderView()}</Content>
+        <Footer style={{ textAlign: 'center' }}>Copywright ©2018 created by Glenn Friedman</Footer>
+      </Layout>
     );
   }
 }
