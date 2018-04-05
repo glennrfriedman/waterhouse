@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import SummaryCard from './SummaryCard';
+import { Timeline } from 'antd';
 
 class Landing extends Component {
   render() {
     return (
       <div style={{ margin: '2%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <SummaryCard year="2018" desc="current" data={this.props.data} intent="warning" />
-        <SummaryCard year="2017" desc="prior" data={this.props.data} intent="success" />
-        <SummaryCard year="2016" desc="prior2" data={this.props.data} intent="success" />
-        <SummaryCard year="2015" desc="prior3" data={this.props.data} intent="success" />
+        <Timeline>
+          <Timeline.Item>step1 2015-09-01</Timeline.Item>
+          <Timeline.Item>step2 2015-09-01</Timeline.Item>
+          <Timeline.Item>step3 2015-09-01</Timeline.Item>
+          <Timeline.Item>step4 2015-09-01</Timeline.Item>
+        </Timeline>
       </div>
     );
   }

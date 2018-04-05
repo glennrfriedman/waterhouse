@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Callout, Tooltip } from '@blueprintjs/core';
+// import { Card, Callout, Tooltip } from '@blueprintjs/core';
 import SummaryTable from './SummaryTable';
 import { Redirect, Link } from 'react-router-dom';
 
@@ -31,30 +31,31 @@ class SummaryCard extends Component {
     const data = this.props.data[desc];
     const link = `/${desc}`;
     return (
-      <Card
-        elevation="4"
-        interactive="true"
-        style={{ margin: '1%', width: '55%' }}
-        onClick={this.clickedCard}
-      >
-        <Callout intent={this.props.intent}>
-          <Tooltip content={this.state.tooltipDesc}>
-            <h5>
-              <Link
-                to={{
-                  pathname: link,
-                  state: { desc: this.props.desc, year: this.props.year }
-                }}
-              >
-                {year} Sample Co. R&D Tax Credit Study{' '}
-              </Link>
-            </h5>
-          </Tooltip>
-        </Callout>{' '}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <SummaryTable data={data} />
-        </div>
-      </Card>
+      <h3>Hello</h3>
+      // <Card
+      //   elevation="4"
+      //   interactive="true"
+      //   style={{ margin: '1%', width: '55%' }}
+      //   onClick={this.clickedCard}
+      // >
+      //   <Callout intent={this.props.intent}>
+      //     <Tooltip content={this.state.tooltipDesc}>
+      //       <h5>
+      //         <Link
+      //           to={{
+      //             pathname: link,
+      //             state: { desc: this.props.desc, year: this.props.year }
+      //           }}
+      //         >
+      //           {year} Sample Co. R&D Tax Credit Study{' '}
+      //         </Link>
+      //       </h5>
+      //     </Tooltip>
+      //   </Callout>{' '}
+      //   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      //     <SummaryTable data={data} />
+      //   </div>
+      // </Card>
     );
   }
 }
