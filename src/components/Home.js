@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Nav from './Nav';
 import Landing from './Landing';
 import QRE from './QRE';
+import Credit from './Credit';
 import Study from './Study';
 import logo from '../images/Pwc-logo-880x660.png';
 import { Layout, Menu, Breadcrumb } from 'antd';
@@ -53,7 +54,16 @@ class Home extends Component {
     return (
       <Switch>
         <Route exact path="/" render={props => <Landing data={this.state.data} routeProps={props} />} />
-        <Route exact path="/qre" render={props => <QRE data={this.state.data} routeProps={props} />} />
+        <Route
+          exact
+          path="/compare/qre"
+          render={props => <QRE data={this.state.data} routeProps={props} />}
+        />
+        <Route
+          exact
+          path="/compare/credit"
+          render={props => <Credit data={this.state.data} routeProps={props} />}
+        />
         <Route exact path="/:desc" render={props => <Study data={this.state.data} routeProps={props} />} />
       </Switch>
     );

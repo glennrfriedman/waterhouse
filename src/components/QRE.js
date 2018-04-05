@@ -15,13 +15,6 @@ class QRE extends Component {
     this.createBarData();
   }
 
-  // Next Steps:
-  // Add show one page for each years' study
-  // in show one page have big cards one for Wage - show current and % of prior year
-  // same for supply and cr
-  // clicking on wage will bring you to a wage survey portal with table showing employee % and salaries
-  // clicking on supply/cr will bring up the same
-
   createBarData = () => {
     let barChartData = {
       labels: ['2018', '2017', '2016', '2015'],
@@ -71,7 +64,7 @@ class QRE extends Component {
           options={{
             title: {
               display: true,
-              text: 'QRE Comparison by Year',
+              text: 'R&D QRE Comparison by Year',
               fontSize: 25
             },
             legend: {
